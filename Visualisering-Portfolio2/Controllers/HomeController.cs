@@ -18,7 +18,11 @@ namespace Visualisering_Portfolio2.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult PC()
+        {
+            return View();
+        }
+        public IActionResult Mobile()
         {
             return View();
         }
