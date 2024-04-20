@@ -1,0 +1,41 @@
+﻿/* Default styles for navbar links */
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0; /* Start from the left */
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease, left 0.3s ease; /* Add transition for width and left */
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: calc(100% - 1rem); /* Expand up to 100% minus 1rem of the width */
+}
+
+.navbar-nav .nav-link.active::after {
+    width: calc(100% - 1rem); /* Keep the bar expanded */
+}
+
+/* Styles for navbar links when collapsed into toggler */
+@media (max-width: 767.98px) {
+    .navbar-collapse .navbar-nav .nav-link {
+        text-align: right; /* Align text to the right */
+    }
+
+    .navbar-collapse .navbar-nav .nav-link::after {
+        left: auto; /* Remove left positioning */
+        right: 0; /* Position black bar at the right */
+        transition: width 0.3s ease; /* Add transition for width */
+    }
+
+    .navbar-collapse .navbar-nav .nav-link:hover::after,
+    .navbar-collapse .navbar-nav .nav-link.active::after {
+        width: 10%; /* Expand up to 10% of the width */
+    }
+}

@@ -1,0 +1,65 @@
+﻿<style>
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 1.5rem; /* Increase the font size */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+        border-radius: 50%; /* Make the buttons circular */
+        padding: 10px; /* Add padding for better clickability */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        color: white; /* Set the color of the icons to white */
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: rgba(0, 0, 0, 0.7); /* Darken the background color on hover */
+    }
+
+    /* img {
+            width: 100%;
+            height: auto;
+        } */
+    .carousel-image {
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+<div id="carouselExampleControls2" class="carousel slide" data-bs-interval="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-image">
+                <img src="~/images/007-craig.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-caption">
+                Caption for Image 1
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-image">
+                <img src="~/images/007musem-map.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-caption">
+                Caption for Image 2
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-image">
+                <img src="~/images/alicia_bond_angelica_bmwz3_goldeneye.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-caption">
+                Caption for Image 3
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

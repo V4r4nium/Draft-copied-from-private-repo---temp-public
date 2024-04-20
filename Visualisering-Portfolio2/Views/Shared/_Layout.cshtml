@@ -6,27 +6,138 @@
     <title>@ViewData["Title"] - Visualisering_Portfolio2</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Visualisering_Portfolio2.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/Visualisering_Portfolio2.styles.css" asp-append-version="true" /> *@
+
+    <style>
+        /* .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.1);
+        }
+
+        .navbar-brand span {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar-brand:hover span {
+            color: red;
+            transform: skewY(-10deg);
+        } */
+
+        .navbar-brand {
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .navbar-brand::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100%;
+            height: 2px;
+            background: none; 
+            transition: background-position 0.3s ease;
+        }
+
+        .navbar-brand:hover::after {
+            background-position: left bottom;
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.1);
+        }
+
+        .navbar-brand span {
+            transition: color 0.3s ease, font-size 0.3s ease; 
+        }
+
+        .navbar-brand:hover span {
+            color: red;
+            font-size: 1.1em; 
+            transform: none;
+        }
+
+
+
+        /* Navbar Links */
+        /* .navbar-nav .nav-link {
+            position: relative; 
+        }
+
+        .navbar-nav .nav-link::after {
+            content: ''; 
+            position: absolute; 
+            bottom: -2px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 0; 
+            height: 2px; 
+            background-color: black; 
+            transition: width 0.3s ease; 
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: calc(100% - 1rem); 
+        }
+
+        .navbar-nav .nav-link.active::after {
+            width: calc(100% - 1rem);
+        } */
+
+
+    </style>
+    <link href="~/css/navbartoggle.css" rel="stylesheet" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Visualisering_Portfolio2</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/007logo-transparent.png" height="60" />
+                    <span>007 Museum</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PC">PC</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Mobile">Mobile</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Billetter">Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Explore">Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Merch">Merch</a>
                         </li>
                     </ul>
                 </div>
@@ -50,5 +161,11 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        var currentUrl = window.location.pathname;
+        var currentLink = document.querySelector('.navbar-nav .nav-link[href="' + currentUrl + '"]');
+        currentLink.classList.add('active');
+    </script>
 </body>
 </html>
