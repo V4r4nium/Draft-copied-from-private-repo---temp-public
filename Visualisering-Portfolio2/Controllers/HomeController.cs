@@ -17,8 +17,23 @@ namespace Visualisering_Portfolio2.Controllers
         {
             return View();
         }
-
-        public IActionResult PC()
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+        public IActionResult Billetter()
+        {
+            return View();
+        }
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+        public IActionResult Explore()
+        {
+            return View();
+        }
+        public IActionResult Merch()
         {
             return View();
         }
@@ -26,6 +41,11 @@ namespace Visualisering_Portfolio2.Controllers
         {
             return View();
         }
+        public IActionResult PC()
+        {
+            return View();
+        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

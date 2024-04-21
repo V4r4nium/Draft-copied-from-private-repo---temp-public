@@ -1,0 +1,353 @@
+﻿@{
+    ViewData["Title"] = "Billettpriser";
+}
+
+
+@* backup paste *@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/bootstrap_remover.css" rel="stylesheet" />
+    <style>
+        .mainBody {
+            width: 100%;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .topContent {
+            width: 100%;
+            background-color: blueviolet;
+            margin: 0 auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top1, .top2{
+            flex:1;
+            text-align: center;
+        }
+
+        .middleOfPageContent {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin: 2vh auto;
+            border: solid 2px black;
+        }
+
+        .middle1-1 {
+            flex:8;
+            width: 100%;
+            max-height:100%;
+            border: solid 2px green;
+            background-image:;
+        }
+
+        .middle1-2{
+            flex:auto;
+            max-width:100%;
+            border: solid 2px orange;
+        }
+
+        .middle1-1 {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        }
+
+
+        .middleTicket {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .middleTicket::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+        }
+
+        .middleTicketText,
+        .middleTicketPrice {
+            flex: 1;
+            text-align: center;
+            font-size: 2vw;
+
+        }
+
+        .middleTicketText,
+        .middleTicketPrice {
+            flex: 1;
+            text-align: center;
+            font-size: 2vw;
+        }
+
+        .middleTicketText h5,
+        .middleTicketPrice h5{
+            font-size: clamp(14px, 2vw, 24px);
+        }
+
+
+    </style>
+</head>
+<body class="mainBody">
+    <header>
+        <div class="header-div">
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="articleDiv-outerLayer">
+                <div class="articleDiv-middleLayer">
+                    <div class="articleDiv-innerLayer">
+                        <div class="col-md-12">
+                            <div class="topContent" id="topContent">
+                                <div class="top1">
+                                    <h1>
+                                        Discover the extraordinary Collection of James Bond 007 Museum.
+                                    </h1>
+                                </div>
+                                <div class="top2">
+                                    <h2>
+                                        Tickets and Guide
+                                    </h2>
+                                    <h4>
+                                        Tickets are available for purchase at the entry.<br>
+                                        Below is a price listing of the different tickets. <br>
+                                    </h4>
+                                </div>
+                            </div>
+                            
+                            <div class="middleOfPageContent" id="middle1">
+                                <div class="middle1-1">
+                                    <h2>Full admission</h2>
+                                </div>
+                                <div class="middle1-2">
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Adult </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 450 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Youth </h5>
+                                            <h6> Below 25 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 300 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Student </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 225 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Senior </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Children </h5>
+                                            <h6> Below 13 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="middleOfPageContent" id="middle2">
+                                <div class="middle1-1">
+                                    <h2>James Bond</h2><br>
+                                    <h4>Daniel Craig</h4>
+                                </div>
+                                <div class="middle1-2">
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Adult </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 300 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Youth </h5>
+                                            <h6> Below 25 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 200 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Student </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 150 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Senior </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Children </h5>
+                                            <h6> Below 13 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="middleOfPageContent" id="middle3">
+                                <div class="middle1-1">
+                                    <h2>James Bond</h2><br>
+                                    <h4>Pierce Brosnan</h4>
+                                </div>
+                                <div class="middle1-2">
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Adult </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 250 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Youth </h5>
+                                            <h6> Below 25 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 150 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Student </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 100 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Senior </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Children </h5>
+                                            <h6> Below 13 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="middleOfPageContent" id="middle4">
+                                <div class="middle1-1">
+                                    <h2>James Bond</h2><br>
+                                    <h4>Timothy Dalton</h4>
+                                </div>
+                                <div class="middle1-2">
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Adult </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 250 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Youth </h5>
+                                            <h6> Below 25 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 150 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Student </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> 100 kr </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Senior </h5>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                    <div class="middleTicket">
+                                        <div class="middleTicketText">
+                                            <h5> Children </h5>
+                                            <h6> Below 13 Years </h6>
+                                        </div>
+                                        <div class="middleTicketPrice">
+                                            <h5> Free </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Bootstrap Scripts -->
+    @* <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPX7jZX8wKXT2/JN9lU=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha384-VGDwqdW9bMlfVgP+4NRiQn8sbYg4XjQF/Ba9rLt+8/zMTbsm4FNTefnF1zGiJq4z" crossorigin="anonymous"></script> *@
+    <!-- Normal Scripts -->
+
+</body>

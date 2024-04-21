@@ -6,3 +6,75 @@
     <h1 class="display-4">Welcome</h1>
     <p>This is the home page</p>
 </div>
+
+<head>
+    <style>
+
+        .dashboard-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            /* border: 2px solid black; */
+        }
+        .dashboard-button {
+            flex: 1 1 150px;
+            padding: 5vw 10vw;
+            margin: 10px;
+            background-color: rgba(68,195,156, 0.8);
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            position: relative;
+            /* font-size: 3vh; */
+            font-size: calc(2vw + 1vh);
+            white-space: nowrap;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .dashboard-button:hover {
+            color: black;
+            background-color: #feb6b6;
+            transform: scale(1.1);
+        }
+
+        .dashboard-button .subtext {
+            font-size: 1.75vh;
+            display: block;
+            margin-top: 0.5vh;
+            color: black;
+        }
+
+        .dashboard-button .subtext2 {
+            font-size: 1.25vh;
+            display: block;
+            margin-top: 0.5vh;
+            color: rgba(20,20,20, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <article>
+        <div class="container">
+            <div class="dashboard">
+                <div class="dashboard-buttons">
+                    <a class="dashboard-button" asp-area="" asp-controller="Home" asp-action="PC">
+                        Desktop
+                        <span class="subtext">Optimal functionality provided for PC users.</span>
+                        <span class="subtext2">This option can be changed at any given time.</span>
+                    </a>
+                    <a class="dashboard-button" asp-area="" asp-controller="Home" asp-action="Mobile">
+                        Mobile
+                        <span class="subtext">Optimal functionality provided for Mobile and Tablet users.</span>
+                        <span class="subtext2">This option can be changed at any given time.</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
