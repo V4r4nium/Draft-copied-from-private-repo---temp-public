@@ -103,7 +103,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/007logo-transparent.png" height="60" />
@@ -113,7 +113,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-md-inline-flex justify-content-between">
                     
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -160,12 +160,23 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 
     <script>
-        var currentUrl = window.location.pathname;
-        var currentLink = document.querySelector('.navbar-nav .nav-link[href="' + currentUrl + '"]');
-        currentLink.classList.add('active');
+        // var currentUrl = window.location.pathname;
+        // var currentLink = document.querySelector('.navbar-nav .nav-link[href="' + currentUrl + '"]');
+        // currentLink.classList.add('active');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentUrl = window.location.pathname;
+            var currentLink = document.querySelector('.navbar-nav .nav-link[href="' + currentUrl + '"]');
+            if (currentLink) {
+                currentLink.classList.add('active');
+            }
+        });
+
     </script>
+
 </body>
 </html>
