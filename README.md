@@ -2,8 +2,7 @@
 This is just a public version of private repo that will be deleted after being advised by the TA's.
 
 ## Active Pages
-PC
-Tickets
+PC and Tickets
 
 ## Context
 The entire content is not finished, and the page Tickets (billetter) does not have images, the divs are colored to showcase the location and placement of the content.
